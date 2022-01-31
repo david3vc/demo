@@ -1,0 +1,85 @@
+// header part
+
+/*******************
+ Topbar
+*******************/
+
+.topbar {
+    background-color: $page-color-primary;
+    position: relative;
+    z-index: 50;
+    .navbar-collapse {
+        padding: 0px;
+    }
+    .top-navbar {
+        min-height: 50px;
+        padding: 0px;
+        .dropdown-toggle::after {
+            display: none;
+        }
+        .navbar-header {
+            background-color: rgba(0,0,0,0.05);
+            line-height: 56px;
+            padding-left: 10px;
+            min-width: $collapsed-sidebar-width;
+            .navbar-brand {
+                margin-right: 0px;
+                padding-bottom: 0px;
+                padding-top: 0px;
+                display: flex;
+                align-items: center;
+                .light-logo {
+                    // display: none;
+                    display:inline-block;
+                }
+                b {
+                    line-height: 50px;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .profile-pic {
+            white-space: nowrap;
+            img{
+                width: 30px;
+                border-radius: 100%;
+            }
+            span{
+                font-size: .9rem;
+                white-space: nowrap;
+            }
+        }
+        .navbar-nav>.nav-item>.nav-link {
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 1.1rem;
+            line-height: 40px;
+        }
+        .navbar-nav>.nav-item>span {
+            line-height: 45px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color:  $page-color-white;
+            padding: 0 10px;
+        }
+
+    }
+
+    .dropdown-menu {
+        box-shadow: $shadow;
+        -webkit-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        border-color: $page-border-color;
+        .dropdown-item {
+            padding: 7px 1.5rem;
+        }
+    }
+
+}
+
+.mini-sidebar {
+    .topbar .top-navbar .navbar-header .navbar-brand {
+        justify-content: center;
+    }
+}

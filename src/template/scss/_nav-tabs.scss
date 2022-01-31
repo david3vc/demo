@@ -1,0 +1,45 @@
+.nav-tabs-filled {
+    li {
+        .nav-link {
+            border: 0px;
+            margin-right: 3px;
+            color: $nav-tabs-link-color;
+
+            &.active {
+                background-color: $page-color-primary;
+                color:  $page-color-white;
+            }
+
+            &:hover {
+                color:  $page-color-white;
+                background-color: $page-color-primary;
+            }
+        }
+    }
+}
+
+.nav-tabs-flat {
+    li {
+        .nav-link {
+            border-color: transparent;
+            // font-weight: 600;
+            opacity: .875;
+            color: $nav-tabs-link-color;
+
+            &.active,
+            &.active:focus,
+            &:focus {
+                border-color: transparent;
+                border-bottom: 2px solid $page-color-primary;
+                color: $page-color-primary;
+                opacity: 1;
+            }
+
+            &:hover {
+                border-color: transparent;
+                border-bottom: 2px solid $page-color-primary;
+                opacity: .9;
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+
+//Helper
+$page-wrapper-bg: #edf1f5;
+$shadow:1px 0px 20px rgba(0, 0, 0, 0.08);
+$sidebar-width: 230px;
+$collapsed-sidebar-width: 56px;
+$page-wrapper-padding-top: 57px;
+
+$page-border-color: var(--bs-gray-300, #dee2e6);
+$page-color-white: var(--bs-white, #fff);
+$page-color-primary: #00a39c;
+$page-color-light: var(--bs-light, #f8f9fa);
+
+$form-material-color: var(--bs-gray-200, #e9ecef);
+
+//Tabs
+$nav-tabs-link-color: var(--bs-gray-700, inherit);
+
+//preloader
+$preloader-bg: rgba(0, 0, 0, .5);
+$preloader-color: $page-color-white;
+
+//theme
+$themecolor: $page-color-primary;
+$themecolor-alt: $themecolor;
+$sidebar: #3C4962;
+$sidebar-alt: #2B394F;
+$sidebar-text: $page-color-white;
+$sidebar-icons: $sidebar-text;
+
+//=========== BOTSTRAP VARIABLES=========
+
+// scss-docs-start color-variables
+$blue:    #2196f3;
+$red:     #f62d51;
+$yellow:  #ffbc34;
+$green:   #55ce63;
+$cyan:    #03a9f3;
+// scss-docs-end color-variables
+
+// // scss-docs-start theme-color-variables
+$primary:       #1a4a84;
+$dark:          #2c3645;
+// // scss-docs-end theme-color-variables
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio:   2.0;
+
+// scss-docs-start card-variables
+$card-border-color: transparent;
+// scss-docs-end card-variables
+
+
+//=========custom my variables=========
+// Create your own map
+$custom-colors: (
+  "accent": #34495e
+);
+
+
+//v-select
+$vs-border-color: $page-border-color;
+
+//vue-datepicker-next
+$namespace: 'mx' !default;
+
+$default-color: var(--bs-body-color, #212529);
+$primary-color: $primary;
+// $input-border-color: $input-border-color !default;
+$input-color: $default-color;
+$input-hover-border-color: var(--bs-gray-400, #ced4da);
