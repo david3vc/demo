@@ -1,3 +1,5 @@
+import {NavLink} from 'react-router-dom';
+
 import {Row, Col, Card, Button, Form, Table} from 'react-bootstrap';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -14,17 +16,17 @@ const UserIndex = ()=> {
             <Row className='page-titles'>
                 <Col className='col-auto align-self-center'>
                     <ol className="breadcrumb py-1">
-                        <li className="breadcrumb-item text-nowrap"><a href="#">Administración</a></li>
-                        <li className="breadcrumb-item text-nowrap"><a href="#">Sistema</a></li>
-                        <li className="breadcrumb-item text-nowrap active">Usuarios</li>
+                        <li className="breadcrumb-item text-nowrap">Administración</li>
+                        <li className="breadcrumb-item text-nowrap">Sistema</li>
+                        <li className="breadcrumb-item text-nowrap fw-bold active">Usuarios</li>
                     </ol>
                 </Col>
                 <Col>
-                    <div className="d-flex justify-content-end align-items-center">                        
-                        <Button variant='success' size='sm'>
+                    <div className="d-flex justify-content-end align-items-center">
+                        <NavLink to='/usuarios/registro' className="btn btn-sm btn-success">
                             <FontAwesomeIcon icon="fa-solid fa-circle-plus" />
                             <span className="d-none d-sm-inline-block">Nuevo</span>
-                        </Button>
+                        </NavLink>
                     </div>
                 </Col>
             </Row>

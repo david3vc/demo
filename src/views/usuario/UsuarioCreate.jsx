@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Card, Col, Form, Row, Tab, Tabs } from "react-bootstrap";
 
@@ -8,10 +10,12 @@ const UsuarioCreate = () => {
             <Row className='page-titles'>
                 <Col className='col-auto align-self-center'>
                     <ol className="breadcrumb py-1">
-                        <li className="breadcrumb-item text-nowrap"><a href="#">Administración</a></li>
-                        <li className="breadcrumb-item text-nowrap"><a href="#">Sistema</a></li>
-                        <li className="breadcrumb-item text-nowrap "><a href="#">Usuarios</a></li>
-                        <li className="breadcrumb-item text-nowrap active">Registro</li>
+                        <li className="breadcrumb-item text-nowrap">Administración</li>
+                        <li className="breadcrumb-item text-nowrap">Sistema</li>
+                        <li className="breadcrumb-item text-nowrap">
+                            <NavLink to='/usuarios' className="fw-bold text-dark">Usuarios</NavLink>
+                        </li>
+                        <li className="breadcrumb-item text-nowrap fw-bold active">Registro</li>
                     </ol>
                 </Col>
                 <Col>
@@ -20,10 +24,10 @@ const UsuarioCreate = () => {
                             <FontAwesomeIcon icon="fa-solid fa-floppy-disk" /> {' '}
                             <span className="d-none d-sm-inline-block">Guardar</span>
                         </Button>
-                            <FontAwesomeIcon icon="fa-solid fa-grip-lines-vertical" className="mx-3" />
-                        <Button variant='dark' size='sm'>
+                        <FontAwesomeIcon icon="fa-solid fa-grip-lines-vertical" className="mx-3" />
+                        <NavLink to='/usuarios' className="btn btn-sm btn-dark">
                             <FontAwesomeIcon icon="fa-solid fa-arrow-left" />
-                        </Button>
+                        </NavLink>
                     </div>
                 </Col>
             </Row>
