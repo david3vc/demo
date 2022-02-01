@@ -12,6 +12,7 @@ import SendResetLink from '../views/auth/SendResetLink';
 //Privadas
 import HomeIndex from '../views/home/HomeIndex';
 import UsuarioIndex from '../views/usuario/UsuarioIndex';
+import UsuarioCreate from '../views/usuario/UsuarioCreate';
 
 const RouterView = ()=> {
 
@@ -33,6 +34,9 @@ const RouterView = ()=> {
             </Route>
             <Route path="/usuarios" element={<PrivateOutlet />}>
                 <Route path='' element={<UsuarioIndex />}/>
+            </Route>
+            <Route path="/usuarios/registro" element={<PrivateOutlet />}>
+                <Route path='' element={<UsuarioCreate />}/>
             </Route>
             
         </Routes>
