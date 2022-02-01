@@ -1,4 +1,6 @@
 .nav-tabs-filled {
+    background-color: var(--bs-white, #fff);
+    
     li {
         .nav-link {
             border: 0px;
@@ -19,6 +21,8 @@
 }
 
 .nav-tabs-flat {
+    background-color: var(--bs-white, #fff);
+
     li {
         .nav-link {
             border-color: transparent;
