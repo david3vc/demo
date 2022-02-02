@@ -2,35 +2,38 @@ import { NavLink } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Card, Col, Form, Row, Tab, Tabs } from "react-bootstrap";
+import Breadcrumb from "../../components/Breadcrumb";
 
 
 const UsuarioCreate = () => {
   return (
         <>
-            <Row className='page-titles'>
-                <Col className='col-auto align-self-center'>
-                    <ol className="breadcrumb py-1">
-                        <li className="breadcrumb-item text-nowrap">Administración</li>
-                        <li className="breadcrumb-item text-nowrap">Sistema</li>
-                        <li className="breadcrumb-item text-nowrap">
-                            <NavLink to='/usuarios' className="fw-bold text-dark">Usuarios</NavLink>
-                        </li>
-                        <li className="breadcrumb-item text-nowrap fw-bold active">Registro</li>
-                    </ol>
-                </Col>
-                <Col>
-                    <div className="d-flex justify-content-end align-items-center">                        
-                        <Button variant='primary' size='sm'>
-                            <FontAwesomeIcon icon="fa-solid fa-floppy-disk" /> {' '}
-                            <span className="d-none d-sm-inline-block">Guardar</span>
-                        </Button>
-                        <FontAwesomeIcon icon="fa-solid fa-grip-lines-vertical" className="mx-3" />
-                        <NavLink to='/usuarios' className="btn btn-sm btn-dark">
-                            <FontAwesomeIcon icon="fa-solid fa-arrow-left" />
-                        </NavLink>
-                    </div>
-                </Col>
-            </Row>
+            <Breadcrumb>
+                <Breadcrumb.Items>
+                    <Breadcrumb.Item>
+                        Administración
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                        Sistema
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item href="/usuarios">
+                        Usuarios
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item className="active">
+                    Registro
+                    </Breadcrumb.Item>
+                </Breadcrumb.Items>
+                <Breadcrumb.Actions>
+                    <Button variant='primary' size='sm'>
+                        <FontAwesomeIcon icon="fa-solid fa-floppy-disk" /> {' '}
+                        <span className="d-none d-sm-inline-block">Guardar</span>
+                    </Button>
+                    <FontAwesomeIcon icon="fa-solid fa-grip-lines-vertical" className="mx-3" />
+                    <NavLink to='/usuarios' className="btn btn-sm btn-dark">
+                        <FontAwesomeIcon icon="fa-solid fa-arrow-left" />
+                    </NavLink>
+                </Breadcrumb.Actions>
+            </Breadcrumb>
             <Row>
                 <Col>
                     <Tabs id="mantenedor-usuario" defaultActiveKey="datosPrincipales" className="nav-tabs-flat">

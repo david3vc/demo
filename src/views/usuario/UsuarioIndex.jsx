@@ -3,28 +3,32 @@ import {NavLink} from 'react-router-dom';
 import {Row, Col, Card, Button, Form, Table} from 'react-bootstrap';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import Breadcrumb from '../../components/Breadcrumb';
 
 const UserIndex = ()=> {
 
     return (
         <>
-            <Row className='page-titles'>
-                <Col className='col-auto align-self-center'>
-                    <ol className="breadcrumb py-1">
-                        <li className="breadcrumb-item text-nowrap">Administración</li>
-                        <li className="breadcrumb-item text-nowrap">Sistema</li>
-                        <li className="breadcrumb-item text-nowrap fw-bold active">Usuarios</li>
-                    </ol>
-                </Col>
-                <Col>
-                    <div className="d-flex justify-content-end align-items-center">
-                        <NavLink to='/usuarios/registro' className="btn btn-sm btn-success">
-                            <FontAwesomeIcon icon="fa-solid fa-circle-plus" />
-                            <span className="d-none d-sm-inline-block">Nuevo</span>
-                        </NavLink>
-                    </div>
-                </Col>
-            </Row>
+            <Breadcrumb>
+                <Breadcrumb.Items>
+                    <Breadcrumb.Item>
+                        Administración
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                        Sistema
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item className="active">
+                        Usuarios
+                    </Breadcrumb.Item>
+                </Breadcrumb.Items>
+                
+                <Breadcrumb.Actions>
+                    <NavLink to='/usuarios/registro' className="btn btn-sm btn-success">
+                        <FontAwesomeIcon icon="fa-solid fa-circle-plus" />
+                        <span className="d-none d-sm-inline-block">Nuevo</span>
+                    </NavLink>
+                </Breadcrumb.Actions>
+            </Breadcrumb>
 
             <Row>
                 <Col>
