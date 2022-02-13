@@ -143,6 +143,20 @@ const LeftSidebar = ()=> {
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            <a className="has-arrow" href="#"
+                                aria-expanded="false">
+                                <span className='nav-item-content'>
+                                    <FontAwesomeIcon icon="fas fa-table" className='me-1 pt-1'/>
+                                    <span className="hide-menu">Tablas del Sistema</span>                                    
+                                </span>
+                            </a>
+                            <ul aria-expanded="false" className="collapse">
+                                <li><NavLink to='/lotes'>Lotes</NavLink></li>
+                                <li><NavLink to='/parametros'>Parámetros</NavLink></li>
+                                <li><NavLink to='/observaciones'>Observaciones</NavLink></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <Outlet/>

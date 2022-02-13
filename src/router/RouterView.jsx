@@ -13,6 +13,12 @@ import SendResetLink from '../views/auth/SendResetLink';
 import HomeIndex from '../views/home/HomeIndex';
 import UsuarioIndex from '../views/usuario/UsuarioIndex';
 import UsuarioCreate from '../views/usuario/UsuarioCreate';
+import LoteIndex from '../views/lotes/LoteIndex';
+import LoteCreate from '../views/lotes/LoteCreate';
+import ParametrosIndex from '../views/parametros/ParametrosIndex';
+import ParametrosCreate from '../views/parametros/ParametrosCreate';
+import ObservacionesIndex from '../views/observaciones/ObservacionesIndex';
+import ObservacionesCreate from '../views/observaciones/ObservacionesCreate';
 
 const RouterView = ()=> {
 
@@ -37,6 +43,24 @@ const RouterView = ()=> {
             </Route>
             <Route path="/usuarios/registro" element={<PrivateOutlet />}>
                 <Route path='' element={<UsuarioCreate />}/>
+            </Route>
+            <Route path="/lotes" element={<PrivateOutlet />}>
+                <Route path='' element={<LoteIndex />}/>
+            </Route>
+            <Route path="/lotes/registro" element={<PrivateOutlet />}>
+                <Route path='' element={<LoteCreate />}/>
+            </Route>
+            <Route path="/parametros" element={<PrivateOutlet />}>
+                <Route path='' element={<ParametrosIndex />}/>
+            </Route>
+            <Route path="/parametros/registro" element={<PrivateOutlet />}>
+                <Route path='' element={<ParametrosCreate />}/>
+            </Route>
+            <Route path="/observaciones" element={<PrivateOutlet />}>
+                <Route path='' element={<ObservacionesIndex />}/>
+            </Route>
+            <Route path="/observaciones/registro" element={<PrivateOutlet />}>
+                <Route path='' element={<ObservacionesCreate />}/>
             </Route>
             
         </Routes>
